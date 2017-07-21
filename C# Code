@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _8.MetricConverter
+{
+    class metricConverter
+    {
+        static void Main(string[] args)
+        {
+            double num = double.Parse(Console.ReadLine());
+            string unit = Console.ReadLine();
+            string outunit = Console.ReadLine();
+
+            if(unit=="m")
+            {
+                num = num / 1;
+            }
+           else if (unit == "mm")
+            {
+                num = num / 1000;
+            }
+            else if (unit == "cm")
+            {
+                num = num / 100;
+            }
+            else if (unit == "mi")
+            {
+                num = num / 0.000621371192;
+            }
+            else if (unit == "in")
+            {
+                num = num / 39.3700787;
+            }
+            else if (unit == "km")
+            {
+                num = num / 0.001;
+            }
+            else if (unit == "ft")
+            {
+                num = num / 3.2808399;
+            }
+            else if (unit == "yd")
+            {
+                num = num / 1.0936133;
+            }
+            if (outunit == "m")
+            {
+                num = num * 1;
+            }
+            else if (outunit == "mm")
+            {
+                num = num * 1000;
+            }
+            else if (outunit == "cm")
+            {
+                num = num * 100;
+            }
+            else if (outunit == "mi")
+            {
+                num = num * 0.000621371192;
+            }
+            else if (outunit == "in")
+            {
+                num = num * 39.3700787;
+            }
+            else if (outunit == "km")
+            {
+                num = num * 0.001;
+            }
+            else if (outunit == "ft")
+            {
+                num = num * 3.2808399;
+            }
+            else if (outunit == "yd")
+            {
+                num = num * 1.0936133;
+            }
+            Console.WriteLine("{0:f8} {1}", num, outunit);
+        }
+    }
+}
